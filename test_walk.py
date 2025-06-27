@@ -1,10 +1,8 @@
 import pygame
 from game_animator import AnimatedCharacter
 
-# Инициализация Pygame
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Тест анимации: Walk (Ходьба)")
 
 # Создаём героя
 hero = AnimatedCharacter(x=400, y=300, scale=3.0)
@@ -13,8 +11,8 @@ hero = AnimatedCharacter(x=400, y=300, scale=3.0)
 hero.load_master_sprite_sheet("platformer_sprites_base.png", frame_width=64, frame_height=64)
 
 # Анимация Walk: кадры 33-40
-hero.add_animation_from_range("walk", 33, 40, speed=12)
-hero.play_animation("walk")
+hero.add_animation_from_range("ходьба", 33, 40, speed=12)
+hero.play_animation("ходьба")
 
 # Основной цикл
 clock = pygame.time.Clock()
